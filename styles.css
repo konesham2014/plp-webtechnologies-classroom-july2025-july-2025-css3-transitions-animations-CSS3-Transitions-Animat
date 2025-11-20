@@ -1,0 +1,307 @@
+/*basic resets*/
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f3f5fa;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+/*header*/
+.site-header {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #3d6df7, #5fa8ff);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/*sections*/
+.section-block {
+  background: #fff;
+  margin: 2rem auto;
+  padding: 1.6rem;
+  width: min(900px, 90%);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/*part 1 CSS3 animations*/
+.fancy-btn {
+  padding: 0.7rem 1.4rem;
+  background: #4e65ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.25s;
+}
+.fancy-btn:hover {
+  background: #223bff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+/*animated box*/
+.animated-box {
+  width: 80px;
+  height: 80px;
+  background: #ff8c5f;
+  margin-top: 1.2rem;
+  border-radius: 10px;
+  animation: bounce 2.2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+/*pure CSS flip card*/
+.preview-card {
+  width: 150px;
+  height: 200px;
+  margin-top: 1.6rem;
+  perspective: 900px;
+}
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.preview-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+.card-front { background: #4a90e2; color: white; }
+.card-back  { background: #50d890; transform: rotateY(180deg); }
+
+/*part 1 basic JS section styling*/
+
+.js-basics-section {
+    margin: 3rem 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.js-basics-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.section-desc {
+    margin-bottom: 2rem;
+    color: #555;
+    max-width: 600px;
+}
+
+/*card layout used for each mini tool*/
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e7e7e7;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Inputs */
+.card input {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+/* Buttons */
+.card button {
+    background: #395bfa;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.25s ease;
+}
+
+.card button:hover {
+    background: #2e4ccc;
+}
+
+/* Output text */
+.output {
+    margin-top: 0.7rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/*part 2 JS + functions demo*/
+.function-demo label {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.output {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  background: #888;
+  border-radius: 12px;
+  margin: 1rem 0;
+  transition: background 0.4s;
+}
+
+/*part 3 JS controlled animations*/
+.js-demo-row {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.interactive-box,
+.interactive-rotator {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #bbb;
+  transition: transform 0.4s, background 0.4s;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.interactive-box.active {
+  background: #6faef7;
+  transform: scale(1.25) rotate(8deg);
+}
+.interactive-rotating-box.active {
+  background: #f7af6f;
+  transform: rotate(-15deg) scale(1.25);
+}
+
+/*JS flip card*/
+.js-card {
+  width: 160px;
+  height: 220px;
+  margin: 1.4rem 0;
+  perspective: 1000px;
+}
+.js-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.js-card.flip .js-card-inner {
+  transform: rotateY(180deg);
+}
+.js-front, .js-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+.js-front { background: #805af5; color: white; }
+.js-back  { background: #f76fa7; transform: rotateY(180deg); }
+
+/*rotator*/
+.rotator {
+  width: 80px;
+  height: 80px;
+  background: #3ad29f;
+  margin: 1rem 0;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.rotating {
+  animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/*modal*/
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.modal[aria-hidden="false"] {
+  pointer-events: auto;
+  opacity: 1;
+}
+.modal-content {
+  background: white;
+  padding: 1.6rem;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  position: relative;
+  animation: slideIn 0.45s ease;
+}
+@keyframes slideIn {
+  from { transform: translateY(-40px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/*footer*/
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2.5rem;
+  background: #2e3a5a;
+  color: white;
+}

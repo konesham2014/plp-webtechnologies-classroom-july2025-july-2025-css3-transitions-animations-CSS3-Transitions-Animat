@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive CSS3 + JavaScript Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Interactive Experience</h1>
+    <p>A mini project combining CSS3 animations + JavaScript logic</p>
+  </header>
+
+  <main>
+    <!--part 1 pure CSS animations-->
+    <section class="section-block">
+      <h2>Part 1 — CSS Animations</h2>
+      <p>These elements animate with CSS alone.</p>
+
+      <div class="css-demo-area">
+        <button class="fancy-btn">Hover Me</button>
+        <div class="animated-box"></div>
+        <div class="preview-card">
+          <div class="card-inner">
+            <div class="card-front">Front Side</div>
+            <div class="card-back">Back Side</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--part 1 variables, conditionals, DOM-->
+<section class="section-block">
+    <h2>JavaScript Basics — Part 1</h2>
+    <p class="section-desc">
+        These small tools demonstrate basic JavaScript fundamentals like variables, 
+        conditionals, and DOM manipulation. Nothing fancy — just the essential logic 
+        that every interactive page relies on.
+    </p>
+
+    <!--greeting tool-->
+    <div class="card">
+        <h3>Greeting Generator</h3>
+        <p>Enter your name and I'll greet you properly.</p>
+
+        <input type="text" id="nameInput" placeholder="Your name…" />
+        <button id="greetBtn">Generate Greeting</button>
+
+        <p class="output" id="greetOutput"></p>
+    </div>
+
+    <!--simple sum calculator-->
+    <div class="card">
+        <h3>Mini Sum Calculator</h3>
+        <p>Give me two numbers and I'll add them together.</p>
+
+        <input type="number" id="numA" placeholder="First number" />
+        <input type="number" id="numB" placeholder="Second number" />
+
+        <button id="sumBtn">Calculate</button>
+
+        <p class="output" id="sumOutput"></p>
+    </div>
+</section>
+
+    <!--part 2 functions with parameters + returns-->
+    <section class="section-block">
+      <h2>Part 2 — JavaScript Functions</h2>
+      <p>Functions below demonstrate parameters, return values and scope.</p>
+
+      <div class="function-demo">
+        <label>Min: <input id="minInput" type="number" value="1"></label>
+        <label>Max: <input id="maxInput" type="number" value="50"></label>
+        <button id="randBtn">Generate Number</button>
+        <p class="output" id="randOutput">...</p>
+      </div>
+
+      <div class="color-box" id="colorBox"></div>
+      <button id="colorizeBtn">Randomize Box Color</button>
+    </section>
+
+    <!--part 3 combining CSS + JS-->
+    <section class="section-block">
+      <h2>Part 3 — Triggering Animations with JS</h2>
+
+      <div class="js-demo-row">
+        <div class="interactive-box" id="interactiveBox">Click button to animate</div>
+        <div class="interactive-rotator" id="interactiveRotatingBox">Click button to animate</div>
+      </div>
+
+      <button id="animateTriggerBtn">Trigger Animation</button>
+
+      <div class="js-card play-card js-flipable">
+        <div class="js-card-inner">
+          <div class="js-front">JS Front</div>
+          <div class="js-back">JS Back</div>
+        </div>
+      </div>
+      <button id="jsFlipBtn">Flip JS Card</button>
+
+      <div class="rotator" id="rotator"></div>
+      <button id="rotateToggleBtn">Start rotation</button>
+
+      <button id="openModalBtn">Open Modal</button>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close">×</button>
+      <h3>Modal Window</h3>
+      <p>This modal can be opened and closed using JS.</p>
+      <button id="modalAction">Do Action</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">Built by Senait Mekonen Gebreegziabher</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
